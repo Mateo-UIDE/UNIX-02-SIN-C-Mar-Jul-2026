@@ -15,3 +15,6 @@ echo "hola compa" > doc_no_cifrado.txt
 
 #Ver el mensaje que mandamos al compañero
 cat doc_no_cifrado.txt
+
+#Se utiliza el hash para cifrar el documento
+gpg --output doc_cifrado.txt --encrypt --recipient 776C4D8CE189758F90E8CAE973D05C4245F8DC04 doc_no_cifrado.txt
