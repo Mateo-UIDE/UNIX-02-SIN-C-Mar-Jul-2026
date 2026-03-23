@@ -6,3 +6,6 @@ gpg --armor --export-secret-keys 3D9C9780B6DA4C47
 
 #Importa la llave del compañero
 gpg --import anthony.asc
+
+#Ver el correo de mi compañero
+gpg --list-keys
