@@ -9,3 +9,9 @@ gpg --import anthony.asc
 
 #Ver el correo de mi compañero
 gpg --list-keys
+
+#Mandar un mensaje al compañero a un archivo
+echo "hola compa" > doc_no_cifrado.txt
+
+#Ver el mensaje que mandamos al compañero
+cat doc_no_cifrado.txt
