@@ -18,3 +18,6 @@ cat doc_no_cifrado.txt
 
 #Se utiliza el hash para cifrar el documento
 gpg --output doc_cifrado.txt --encrypt --recipient 776C4D8CE189758F90E8CAE973D05C4245F8DC04 doc_no_cifrado.txt
+
+#Visualizar que el documento fue cifrado
+cat doc_cifrado.txt
