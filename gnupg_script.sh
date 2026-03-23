@@ -21,3 +21,6 @@ gpg --output doc_cifrado.txt --encrypt --recipient 776C4D8CE189758F90E8CAE973D05
 
 #Visualizar que el documento fue cifrado
 cat doc_cifrado.txt
+
+#Decifrar el mesaje enviado
+gpg --decrypt doc_cifrado_anthony.txt
