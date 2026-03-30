@@ -13,4 +13,4 @@ sudo parted -l
 #sample the disks and partitions of the system with his archives system
 lsblk -f
 #Check if the folder exists; if it does, identify whether the system booted in UEFI or BIOS.
-Check if the folder exists; if it does, identify whether the system booted in UEFI or BIOS.
+[ -d /sys7firmware/efi ] && echo "UEFI" || echo "BIOS"
