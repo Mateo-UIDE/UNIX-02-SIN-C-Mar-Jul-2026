@@ -12,3 +12,5 @@ sudo parted -l && echo -e "\n--\n" && lsblk -f && e "\n--\n"
 sudo parted -l
 #sample the disks and partitions of the system with his archives system
 lsblk -f
+#Check if the folder exists; if it does, identify whether the system booted in UEFI or BIOS.
+Check if the folder exists; if it does, identify whether the system booted in UEFI or BIOS.
