@@ -35,3 +35,14 @@ cd $HOME
 echo $BASH
 #Shows the value of the PATH variable, which is a list of directories where the system looks for executable programs when you run a command
 echo $PATH
+#who am I?
+whoami
+#lists files and directories in the current folder sorted by modification time, showing the most recently modified items first in a detailed (long) 
+#format
+ls -lt
+#opens the manual page for the ls command, showing detailed information about how to use it, its options, and examples
+man ls
+#lists the contents of the /dev directory and then shows only the first 5 entries from that list
+ls /dev | head -5
+#lists the contents of the /etc directory and shows only the last 5 entries from that list
+ls /etc | tail -5
