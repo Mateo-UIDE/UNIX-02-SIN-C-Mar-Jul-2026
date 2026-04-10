@@ -46,3 +46,4 @@ man ls
 ls /dev | head -5
 #lists the contents of the /etc directory and shows only the last 5 entries from that list
 ls /etc | tail -5
+
