@@ -2,3 +2,11 @@
 ls -a
 #lists all files and directories in the current folder, including hidden files.
 ls --all
+#displays file sizes in a human-readable format (like KB, MB, GB) instead of bytes.
+ls -h
+#lists all files (including hidden ones) in a detailed format, showing permissions, owner, size, and date, with sizes displayed in a human-readable way (KB, MB, GB).
+ls -l -a -h
+#shows a detailed list of all files (including hidden ones), with file sizes in a human-readable format (KB, MB, GB).
+ls -l -ah
+#shows all files (including hidden ones) in a detailed list, with sizes displayed in a human-readable format (KB, MB, GB).
+ls -lah
