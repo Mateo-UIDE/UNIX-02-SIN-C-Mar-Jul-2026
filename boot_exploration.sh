@@ -19,3 +19,10 @@ ls --help
 #shows the full manual page for the ls command, including detailed explanations of all options and usage.
 man ls
     #To navigate, start with the text /all, press (n) to go forward, press (N - shift + n) to go backward, and press (q) to exit.
+#shows the full manual page for the git clone command, including all options and detailed usage information.
+man git-clone
+    #is used in git clone to create a shallow copy of a repository, downloading only the most recent commits up to the specified number.
+    --depth <depth>
+        Create a shallow clone with a history truncated to the specified number of commits. Implies --single-branch unless
+        --no-single-branch is given to fetch the histories near the tips of all branches. If you want to clone submodules shallowly,
+        also pass --shallow-submodules.
