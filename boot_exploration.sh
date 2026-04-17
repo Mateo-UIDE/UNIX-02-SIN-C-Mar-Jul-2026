@@ -14,3 +14,7 @@ ls -lah
 mkdir -- -rf
 #removes (deletes) a directory named -rf.
 rmdir -- -rf
+#displays a help message that explains how to use the ls command and shows all available options.
+ls --help
+#shows the full manual page for the ls command, including detailed explanations of all options and usage.
+man ls
