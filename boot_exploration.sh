@@ -10,3 +10,7 @@ ls -l -a -h
 ls -l -ah
 #shows all files (including hidden ones) in a detailed list, with sizes displayed in a human-readable format (KB, MB, GB).
 ls -lah
+#creates a directory named -rf.
+mkdir -- -rf
+#removes (deletes) a directory named -rf.
+rmdir -- -rf
