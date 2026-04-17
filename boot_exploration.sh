@@ -26,3 +26,10 @@ man git-clone
         Create a shallow clone with a history truncated to the specified number of commits. Implies --single-branch unless
         --no-single-branch is given to fetch the histories near the tips of all branches. If you want to clone submodules shallowly,
         also pass --shallow-submodules.
+
+-rw-rw-rw-
+||  |   |
+||  |   |_ permissions for "others" -- read only
+||  |_ permissions for "group" -- read and execute
+||_ permissions for "user" -- read,write,execute
+|_ tipe of archive: "-" normal archive,"d" directory,"l" simbolic link
