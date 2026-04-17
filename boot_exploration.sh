@@ -18,3 +18,4 @@ rmdir -- -rf
 ls --help
 #shows the full manual page for the ls command, including detailed explanations of all options and usage.
 man ls
+    #To navigate, start with the text /all, press (n) to go forward, press (N - shift + n) to go backward, and press (q) to exit.
