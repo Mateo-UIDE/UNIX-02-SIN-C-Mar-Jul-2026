@@ -33,3 +33,18 @@ man git-clone
 ||  |_ permissions for "group" -- read and execute
 ||_ permissions for "user" -- read,write,execute
 |_ tipe of archive: "-" normal archive,"d" directory,"l" simbolic link
+
+#lists files and directories in a detailed format, showing permissions, owner, size, and modification date.
+ls -l
+#creates an empty file named script.sh if it does not exist, or updates its timestamp if it already exists.
+touch script.sh
+#gives execute permission to the file script.sh, allowing it to be run as a program.
+chmod +x script.sh
+#adds execute permission only for the file owner (user) on script.sh, allowing the owner to run it.
+chmod u+x script.sh
+#creates an empty file named secreto.txt if it does not exist, or updates its timestamp if it already exists.
+touch secreto.txt
+#removes read permission for others (users who are not the owner or in the group) from the file secreto.txt.
+chmod o-r secreto.txt
+#creates an empty file named privado if it does not exist, or updates its timestamp if it already exists.
+touch privado
