@@ -65,3 +65,13 @@ sudo -i
 echo "$HOME"
 #prints the literal string $HOME to the terminal. Unlike double quotes, single quotes prevent the shell from performing variable expansion, treating every character inside them as plain text.
 echo '$HOME'
+#creates a new file named hola.sh (or overwrites it if it already exists) and writes the string #!/bin/sh into it. This specific string is known as a shebang, which tells the operating system to use the Bourne shell to execute the script.
+echo '#!/bin/sh' > hola.sh
+#appends the text echo"Hola desde mi primer script" to the end of the file named hola.sh. By using the >> operator, the existing content of the file is preserved, and the new line is added at the bottom.
+echo 'echo"Hola desde mi primer script"' >> hola.sh
+#lists the details of the file hola.sh in "long format." It displays the file's permissions, owner, group, size, last modification date, and filename.
+ls -l hola.sh
+#modifies the file permissions of hola.sh to make it executable. The +x flag grants "execute" permissions to the user, group, and others, allowing the file to be run as a program or script.
+chmod +x hola.sh
+#reads the content of the file hola.sh and prints it to the standard output (your terminal screen). It is the most common way to quickly inspect the text inside a file without opening an editor.
+cat hola.sh
