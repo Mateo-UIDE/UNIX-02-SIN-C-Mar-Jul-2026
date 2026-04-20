@@ -83,3 +83,9 @@ touch /etc/prueba.txt
 mkdir ~/mi_carpeta
 #need sudo.It install packages, touch system directories(/usr/bi, etc)
 apt install cowsay
+#create a file called prueba.txt
+touch prueba.txt
+#assign permissions for read an write (6) only for users.
+chmod 600 prueba.txt
+#assing permissions (7)read,write,execute for users,(5)read,execute for groups,(5)read,execute for others.
+chmod 755 prueba.txt
