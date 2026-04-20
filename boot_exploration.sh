@@ -48,3 +48,12 @@ touch secreto.txt
 chmod o-r secreto.txt
 #creates an empty file named privado if it does not exist, or updates its timestamp if it already exists.
 touch privado
+#gives the owner read and write permissions, and removes all permissions (read, write, execute) from group and others for the file privado.
+chmod u+rw,go-rwx privado
+
+#Error because the output redirection (>) is executed by the shell (your current terminal), not by the sudo command.
+sudo echo "hola" >/etc/archivo_protegido
+#sends the string "hola" to the tee utility with administrative privileges, which writes it to a protected system file. The redirection to /dev/null is used to hide the redundant output from the terminal.
+echo "hola" | sudo tee /etc/archivo_protegido>/dev/null
+#pipes the string "hola" into the tee utility, which is executed with root privileges. tee writes the input to the specified protected file and simultaneously displays the output in the terminal.
+echo "hola" | sudo tee /etc/archivo_protegido
