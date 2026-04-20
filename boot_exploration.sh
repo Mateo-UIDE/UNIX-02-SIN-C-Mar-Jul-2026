@@ -75,3 +75,11 @@ ls -l hola.sh
 chmod +x hola.sh
 #reads the content of the file hola.sh and prints it to the standard output (your terminal screen). It is the most common way to quickly inspect the text inside a file without opening an editor.
 cat hola.sh
+#don't need sudo. Reading /etc is public.
+ls /etc
+#need sudo. /etc belongs to root and not leaves writing to normal users.
+touch /etc/prueba.txt
+#don't need sudo. ~is your own house.
+mkdir ~/mi_carpeta
+#need sudo.It install packages, touch system directories(/usr/bi, etc)
+apt install cowsay
