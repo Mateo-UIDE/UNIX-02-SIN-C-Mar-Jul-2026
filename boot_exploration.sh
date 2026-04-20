@@ -59,3 +59,5 @@ echo "hola" | sudo tee /etc/archivo_protegido>/dev/null
 echo "hola" | sudo tee /etc/archivo_protegido
 #invokes a new shell (sh) with administrative privileges to execute a specific string of commands. This allows the shell itself to handle the output redirection (>>), enabling the user to append text to a protected system file.
 sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
+#enters temporarily to total superuser, for logout with "exit"
+sudo -i
