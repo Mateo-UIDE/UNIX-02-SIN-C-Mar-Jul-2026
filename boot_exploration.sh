@@ -61,3 +61,7 @@ echo "hola" | sudo tee /etc/archivo_protegido
 sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
 #enters temporarily to total superuser, for logout with "exit"
 sudo -i
+#prints the value of the $HOME environment variable to the terminal. This variable stores the absolute path to the current user's home directory
+echo "$HOME"
+#prints the literal string $HOME to the terminal. Unlike double quotes, single quotes prevent the shell from performing variable expansion, treating every character inside them as plain text.
+echo '$HOME'
