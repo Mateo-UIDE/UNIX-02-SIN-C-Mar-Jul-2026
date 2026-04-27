@@ -109,3 +109,12 @@ umask 027
     #The subtraction is done digit by digit; in the case of directories, the subtraction starts from the number 777.
 #it removes many permissions and is very private.
 umask 077
+#create a user named luna.
+sudo useradd -m -s /usr/bin/zsh luna
+#shows users with personal folders.
+ls /home
+#it displays file details, including owner.
+ls -l mi_archivo
+#change the file owner to luna.
+sudo chown luna mi_archivo
+
