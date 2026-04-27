@@ -102,3 +102,8 @@ sudo apt install acl
 sudo chown -R $(whoami) .
 #recursively removes ACLs (special permissions).
 sudo setfacl -bnR .
+#After updating and installing everything necessary, this time umask is working properly.
+#defines which permissions are removed by default from new files and directories.
+umask 027
+    #The subtraction is done digit by digit; in the case of files, the subtraction starts from the number 666.
+    #The subtraction is done digit by digit; in the case of directories, the subtraction starts from the number 777.
