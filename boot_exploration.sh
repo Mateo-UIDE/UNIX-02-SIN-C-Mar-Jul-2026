@@ -107,3 +107,5 @@ sudo setfacl -bnR .
 umask 027
     #The subtraction is done digit by digit; in the case of files, the subtraction starts from the number 666.
     #The subtraction is done digit by digit; in the case of directories, the subtraction starts from the number 777.
+#it removes many permissions and is very private.
+umask 077
