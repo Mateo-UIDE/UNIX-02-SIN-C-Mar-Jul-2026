@@ -1,3 +1,4 @@
+
 #command used in Unix/Linux systems.
 ls -a
 #lists all files and directories in the current folder, including hidden files.
@@ -89,3 +90,15 @@ touch prueba.txt
 chmod 600 prueba.txt
 #assing permissions (7)read,write,execute for users,(5)read,execute for groups,(5)read,execute for others.
 chmod 755 prueba.txt
+
+#When we have a problem, we shouldn't rely solely on AI, since when we ask it for something specific, it doesn't have a definitive answer. This causes confusion for the programmer. That's why it's better to use the experience of others, using forums and other tools. With this, it's possible to solve many errors we might encounter.
+#create a file called archivo1
+touch archivo1
+#make a directory called directory1
+mkdir directorio1
+#is used to install the ACL package on Linux.
+sudo apt install acl
+#change the owner of files/folders.
+sudo chown -R $(whoami) .
+#recursively removes ACLs (special permissions).
+sudo setfacl -bnR .
