@@ -6,3 +6,6 @@ groups
 cat /etc/passwd
 #Reads the user account file and displays only the first 10 lines.
 cat /etc/passwd | head -10
+#The archive and directory inherit UID and GID
+touch test.txt
+ls -la
