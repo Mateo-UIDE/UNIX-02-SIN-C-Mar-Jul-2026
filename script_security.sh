@@ -27,3 +27,9 @@ groupadd --system servicios_web
 grep -E "desarroladores|operaciones|servicios_web" /etc/group
 #Searches for specific configuration variables that define the range of Group IDs (GIDs) allowed on the system.
 grep -E "GID_MIN|GID_MAX|SYS_GID" /etc/login.defs
+#Create groups with addgroup
+addgroup diseno
+addgroup --gid 21000 marketing
+addgroup --system cache_web
+#Filters the system group file to find and display the entries for the specific groups "diseno," "marketing," and "cache_web."
+grep -E "diseno|marketing|cache_web" /etc/group
