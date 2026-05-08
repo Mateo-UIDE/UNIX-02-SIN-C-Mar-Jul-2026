@@ -13,3 +13,7 @@ ls -la
 cat /etc/group | head -10
 #Displays the names of all groups the current user belongs to.
 groups
+#Show UID and Gid of the actual user.
+id -u
+id -g
+id -G
