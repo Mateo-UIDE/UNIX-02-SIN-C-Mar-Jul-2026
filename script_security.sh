@@ -33,3 +33,6 @@ addgroup --gid 21000 marketing
 addgroup --system cache_web
 #Filters the system group file to find and display the entries for the specific groups "diseno," "marketing," and "cache_web."
 grep -E "diseno|marketing|cache_web" /etc/group
+#Add users to group using usermod
+usermod -aG desarrolladores root
+usermod -aG diseno root
