@@ -25,3 +25,5 @@ groupadd -g 2000 operaciones
 groupadd --system servicios_web
 #Searches for and displays lines containing specific group names within the system group file.
 grep -E "desarroladores|operaciones|servicios_web" /etc/group
+#Searches for specific configuration variables that define the range of Group IDs (GIDs) allowed on the system.
+grep -E "GID_MIN|GID_MAX|SYS_GID" /etc/login.defs
