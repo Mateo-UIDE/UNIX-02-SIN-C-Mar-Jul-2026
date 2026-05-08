@@ -17,3 +17,11 @@ groups
 id -u
 id -g
 id -G
+#Creates a new security group named "desarrolladores" on the system.
+groupadd desarrolladores
+#Creates a new group named "operaciones" with a specific numeric ID (GID) of 2000.
+groupadd -g 2000 operaciones 
+#Creates a new system group named "servicios_web."
+groupadd --system servicios_web
+#Searches for and displays lines containing specific group names within the system group file.
+grep -E "desarroladores|operaciones|servicios_web" /etc/group
