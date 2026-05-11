@@ -49,7 +49,7 @@ usermod -aG grupo_temporal root
 usermod -G desarrolladores root
 #adds the user root to the groups diseno, marketing, and grupo_temporal simultaneously while keeping all their current group memberships intact.
 usermod -aG diseno,marketing,grupo_temporal root
-
+#show initial state 
 [Mateo-Charro] UNIX-02-SIN-C-Mar-Jul-2026 ✓ $ ls -la ~/lab_chgrp/proyectos/
 total 8
 drwxr-xr-x 2 root root 4096 may 11 14:58 .
