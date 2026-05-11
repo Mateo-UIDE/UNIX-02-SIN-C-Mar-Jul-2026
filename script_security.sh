@@ -45,3 +45,5 @@ id root
 groupadd grupo_temporal
 #appends the user root to the group grupo_temporal without removing them from any of their existing groups.
 usermod -aG grupo_temporal root
+#this remove all secundary groups except "desarrolladores" group.
+usermod -G desarrolladores root
