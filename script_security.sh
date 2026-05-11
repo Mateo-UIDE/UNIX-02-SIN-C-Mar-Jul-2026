@@ -47,3 +47,5 @@ groupadd grupo_temporal
 usermod -aG grupo_temporal root
 #this remove all secundary groups except "desarrolladores" group.
 usermod -G desarrolladores root
+#adds the user root to the groups diseno, marketing, and grupo_temporal simultaneously while keeping all their current group memberships intact.
+usermod -aG diseno,marketing,grupo_temporal root
