@@ -65,3 +65,7 @@ drwxr-xr-x 5 root root 4096 may 11 14:57 ..
 chgrp desarrolladores ~/lab_chgrp/proyectos/app.py
 #chane group of multiple files
 chgrp diseno ~/lab_chgrp/proyectos/config.json ~/lab_chgrp/reportes/informe.txt
+#recursively change all one directory
+chgrp -R desarrolladores ~/lab_chgrp/scripts/
+#Use verboses to see what changes
+chgrp -Rv diseno ~/lab_chgrp/reportes/
