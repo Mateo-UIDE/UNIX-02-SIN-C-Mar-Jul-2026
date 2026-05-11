@@ -36,3 +36,8 @@ grep -E "diseno|marketing|cache_web" /etc/group
 #Add users to group using usermod
 usermod -aG desarrolladores root
 usermod -aG diseno root
+
+#adds the user root to the group named marketing to grant it that group's specific file or folder permissions.
+adduser root marketing
+#displays the specific user ID (UID), group ID (GID), and all secondary groups associated with the root account to verify its identity and permissions.
+id root
