@@ -41,3 +41,7 @@ usermod -aG diseno root
 adduser root marketing
 #displays the specific user ID (UID), group ID (GID), and all secondary groups associated with the root account to verify its identity and permissions.
 id root
+#creates a new group named grupo_temporal in the system so you can later assign users and specific file permissions to it.
+groupadd grupo_temporal
+#appends the user root to the group grupo_temporal without removing them from any of their existing groups.
+usermod -aG grupo_temporal root
