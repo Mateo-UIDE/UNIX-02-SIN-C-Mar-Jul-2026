@@ -28,3 +28,10 @@ echo $$
 #Closes the current shell session.
 exit
 echo $$
+#
+touch ~/dentro_de_newgrp.txt   
+ls -la ~/dentro_de_newgrp.txt
+#Creates the directory path proyecto_dev/src, including parent folders if needed.
+mkdir -p~/proyecto_dev/src
+#Lists files in the home directory with detailed information and file sizes.
+ls -ls ~/
