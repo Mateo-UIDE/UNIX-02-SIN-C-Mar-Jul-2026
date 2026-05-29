@@ -12,3 +12,19 @@ echo "Grupo actual: $(id -gn)"
 touch ~/antes_de_newgrp.txt
 #Shows detailed information about the file, including permissions and ownership.
 ls -la ~/antes_de_newgrp.txt
+#Updates the package list from the software repositories.
+apt update
+#Installs the latest available versions of installed packages.
+apt upgrade
+#Installs additional Linux utility tools and commands.
+apt install util-linux-extra
+#Shows the location of the newgrp command executable.
+which newgrp  
+#
+touch ~/despues_de_newgrp.txt
+ls -la ~/despues_de_newgrp.txt
+#Displays the current shell process ID (PID).
+echo $$
+#Closes the current shell session.
+exit
+echo $$
