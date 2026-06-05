@@ -13,3 +13,4 @@ echo "${IP_ADDRESSES[*]}"
 
 IP_ADDRESSES[0]="192.168.1.10"
 echo "${IP_ADDRESSES[*]}"
+
