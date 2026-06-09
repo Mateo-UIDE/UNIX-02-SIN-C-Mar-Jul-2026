@@ -19,3 +19,5 @@ echo "${PRIMER_NOMBRE} ${APELLIDO}" >> output.txt
 # command. (Use man cp if you aren’t sure of the command’s syntax.)
 cp output.txt backup.txt
 
+# 6. Prints the content of the output.txt file to the standard output stream.
+echo "¡Ejercicio completado con éxito! Se han generado output.txt y backup.txt."
