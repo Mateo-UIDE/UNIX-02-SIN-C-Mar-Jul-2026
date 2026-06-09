@@ -11,6 +11,11 @@ APELLIDO=$2
 # We use a single '>' to create the file (or overwrite it if it already exists).
 date +"%d-%m-%Y" > output.txt
 
-# 4.Writes your full name to output.txt.
+# 4. Writes your full name to output.txt.
 # We use '>>' to add (append) text to the file without deleting the date.
 echo "${PRIMER_NOMBRE} ${APELLIDO}" >> output.txt
+
+# 5. Makes a backup copy of output.txt, named backup.txt, using the cp
+# command. (Use man cp if you aren’t sure of the command’s syntax.)
+cp output.txt backup.txt
+
