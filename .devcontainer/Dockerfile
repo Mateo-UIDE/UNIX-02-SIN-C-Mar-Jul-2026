@@ -31,17 +31,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tor torsocks proxychains4 obfs4proxy \
     httpie \
     \
-    
+
 # e. sed: Modifies locale.gen to enable Spanish. (BHB Ch.2: text processing)
     && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
     && locale-gen \
     \
- # --- Limpieza final: reducir el tamaño de la imagen ---
- # apt deja archivos de caché que ya no necesitamos después de instalar.
- # Borrarlos aquí (en el mismo RUN) hace la capa final más pequeña.
- # Si los borráramos en otro RUN, seguirían ocupando en la capa anterior.
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
+    
+# f. Cleanup: Removes cache files in the same layer to keep the image slim.
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 
 # ----------------------------------------------------------------------------
