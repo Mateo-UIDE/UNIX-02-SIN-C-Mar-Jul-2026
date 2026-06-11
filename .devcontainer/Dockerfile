@@ -36,18 +36,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
     && locale-gen \
     \
-    
+
 # f. Cleanup: Removes cache files in the same layer to keep the image slim.
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-
-# ----------------------------------------------------------------------------
-# SHELL: qué intérprete usar en los siguientes RUN
-# ----------------------------------------------------------------------------
-# Por defecto Docker usa /bin/sh (un shell más limitado y antiguo). Lo
-# cambiamos a bash por si agregamos más instrucciones con sintaxis
-# moderna (arrays, [[ ]], etc.).
+# g. SHELL: Forces bash as the default shell for all subsequent RUN instructions.
 SHELL ["/bin/bash", "-c"]
 
 
