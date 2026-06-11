@@ -62,4 +62,6 @@ RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{magenta}[Mateo-Charro]%f %F{magenta}%1 ~%f %(?.%F{green}✓✓.%F{red}X💀)%f %F{magenta}%#%f '
 EOF
 
+# l. CMD: Defines the command that runs when the container starts.
+# CMD is executed at runtime, unlike RUN which is executed at build time.
 CMD ["/usr/bin/zsh"]
