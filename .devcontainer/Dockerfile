@@ -47,13 +47,7 @@ SHELL ["/bin/bash", "-c"]
 # h. WORKDIR: Sets the default directory when the container starts.
 WORKDIR /workspaces
 
-# Configuración de Git para el contenedor:
-# - safe.directory *: confía en cualquier repo montado (necesario porque
-#   /workspaces/... tiene un UID distinto al de root dentro del container).
-# - init.defaultBranch main: evita warnings de "master vs main" en git init.
-# - pull.rebase false: merge por defecto al hacer pull (más intuitivo)
-# - git lfs install --system: registra los hooks de LFS globalmente para
-#   que, si un repo los necesita, funcionen sin sorpresas.
+# i. git config: Sets system-wide git configurations for the lab.
 RUN git config --system --add safe.directory '*' \
  && git config --system init.defaultBranch main \
  && git config --system pull.rebase false \
