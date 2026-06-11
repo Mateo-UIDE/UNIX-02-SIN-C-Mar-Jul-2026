@@ -56,7 +56,10 @@ RUN git config --system --add safe.directory '*' \
 # j. chsh: Changes the default shell to zsh for the root user.
 RUN chsh -s /usr/bin/zsh root
 
-Run cat >> /root/.zshrc <<'EOF'
+# k. Heredoc: Uses a heredoc to append custom configuration to .zshrc.
+# (BHB Ch.1: Redirection/pipes and shell configuration)
+RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{magenta}[Mateo-Charro]%f %F{magenta}%1 ~%f %(?.%F{green}✓✓.%F{red}X💀)%f %F{magenta}%#%f '
 EOF
+
 CMD ["/usr/bin/zsh"]
