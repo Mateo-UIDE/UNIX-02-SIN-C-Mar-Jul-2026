@@ -15,107 +15,20 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
 
-# ----------------------------------------------------------------------------
-# RUN: ejecutar comandos durante la construcción de la imagen
-# ----------------------------------------------------------------------------
-# Aquí instalamos TODO el software del curso en un solo RUN.
-#
-#   apt-get update          -> actualiza la lista de paquetes disponibles
-#   apt-get install         -> descarga e instala los paquetes listados
-#     -y                    -> responde "sí" automáticamente
-#     --no-install-recommends -> instala SOLO lo esencial (no los extras
-#                                sugeridos). Ahorra cientos de MB.
-#
-# ¿Por qué un solo RUN gigante y no 10 RUN pequeños?
-# Porque CADA RUN crea una capa nueva en la imagen. Menos capas = imagen
-# más pequeña, más rápida de construir y de descargar.
-#
-# El "&&" encadena comandos: ejecuta el siguiente SOLO SI el anterior
-# terminó bien. Si algo falla, el build se detiene con error (que es lo
-# que queremos: mejor un error claro que una imagen rota).
+# d. RUN (apt-get): The main installation block.
+# We combine commands into one RUN to minimize image layers (improving size/speed).
+# && ensures execution only proceeds if the previous command succeeds. (BHB Ch.3)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    \
-    # === Editores de texto y shells (intérpretes de comandos) ===
-    neovim \
-    vim \
-    zsh \
-    bash-completion \
-    \
-    # === Herramientas de 4ta generación ===
-    # Estas son las protagonistas de las Unidades 2, 3 y 4:
-    perl \
-    make \
-    gawk \
-    sed \
-    grep \
-    \
-    # === Utilidades básicas de UNIX ===
-    # coreutils trae cat, ls, head, tail, sort, cut, tr, etc.
-    # findutils trae find y xargs.
-    # procps trae ps, top, kill (gestión de procesos).
-    # less = paginador para leer archivos largos.
-    # tree = muestra directorios como árbol.
-    # jq = procesa JSON desde la línea de comandos.
-    coreutils \
-    findutils \
-    procps \
-    less \
-    tree \
-    jq \
-    \
-    # === Páginas de manual (comando `man`) ===
-    # La imagen base de Kali viene sin documentación para
-    # ahorrar espacio. La reinstalamos porque en el curso "man bash" o
-    # "man grep" es material de consulta obligada.
-    man-db \
-    manpages \
-    manpages-posix \
-    \
-    # === Red básica y utilidades de descarga ===
-    curl \
-    wget \
-    git \
-    git-lfs \
-    ca-certificates \
-    locales \
-    \
-    # === Linter (revisor automático de errores) para scripts Bash ===
+    neovim vim zsh bash-completion \
+    perl make gawk sed grep \
+    coreutils findutils procps less tree jq \
+    man-db manpages manpages-posix \
+    curl wget git git-lfs ca-certificates locales \
     shellcheck \
-    \
-    # === Reconocimiento y escaneo de red ===
-    # nmap = el escáner de puertos más famoso.
-    # masscan = escaneo masivo de rangos grandes de IPs.
-    nmap \
-    masscan \
-    \
-    # === Captura y análisis de paquetes de red ===
-    # tcpdump = capturador clásico por terminal.
-    # tshark = versión de terminal de Wireshark.
-    tcpdump \
-    tshark \
-    \
-    # === Utilidades de red variadas ===
-    netcat-traditional \
-    socat \
-    dnsutils \
-    whois \
-    traceroute \
-    mtr-tiny \
-    iproute2 \
-    net-tools \
-    iputils-ping \
-    \
-    # === Anonimato: Tor y similares ===
-    # tor = cliente de la red Tor.
-    # torsocks = "envoltorio" que hace pasar cualquier comando por Tor.
-    # proxychains4 = encadena múltiples proxies.
-    # obfs4proxy = ofusca el tráfico de Tor para evadir bloqueos.
-    tor \
-    torsocks \
-    proxychains4 \
-    obfs4proxy \
-    \
-    # === Cliente HTTP más legible que curl para aprender ===
+    nmap masscan \
+    tcpdump tshark \
+    netcat-traditional socat dnsutils whois traceroute mtr-tiny iproute2 net-tools iputils-ping \
+    tor torsocks proxychains4 obfs4proxy \
     httpie \
     \
  # --- Después de instalar, activamos el idioma español ---
