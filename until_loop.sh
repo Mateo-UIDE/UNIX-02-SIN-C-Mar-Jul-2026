@@ -1,6 +1,6 @@
 #!/bin/bash
 #Creates a variable named FILE and assigns the filename output.txt to it.
-FILE="output.txt"
+FILE="outpit.txt"
 #Creates the file if it does not exist or updates its timestamp if it does.
 touch "${FILE}"
 #Starts a loop that continues until the file exists and contains data.
