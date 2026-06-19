@@ -17,3 +17,11 @@ echo "hola1,chao1" > test.csv
 echo "hola2,chao2" >> test.csv
 echo "hola3,chao3" >> test.csv
 awk -F',' '{print $1}' test.csv
+head log.txt
+awk 'NR < 10' log.txt
+#Searches log.txt and displays all lines containing the IP address 42.236.10.117.
+grep "42.236.10.117" log.txt
+#Prints the 7th column (field) of every line in log.txt.
+awk '{print $7}' log.txt
+#First finds all lines with the IP address 42.236.10.117, then prints the 7th column from those matching lines only.
+grep "42.236.10.117" log.txt | awk '{print $7}'
