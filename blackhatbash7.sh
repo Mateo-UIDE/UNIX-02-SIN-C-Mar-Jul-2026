@@ -25,3 +25,5 @@ grep "42.236.10.117" log.txt
 awk '{print $7}' log.txt
 #First finds all lines with the IP address 42.236.10.117, then prints the 7th column from those matching lines only.
 grep "42.236.10.117" log.txt | awk '{print $7}'
+sed 's/Mozilla/Godzilla/g' log.txt
+sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt
